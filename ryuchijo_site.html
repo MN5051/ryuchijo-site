@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>留置場案内</title>
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#111827;
+      --soft:#1f2937;
+      --line:#334155;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --accent:#38bdf8;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Sans","Yu Gothic",sans-serif;
+      background:linear-gradient(180deg,#0b1120 0%, #111827 100%);
+      color:var(--text);
+      line-height:1.7;
+    }
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+    header{
+      padding:72px 24px 48px;
+      text-align:center;
+    }
+    .badge{
+      display:inline-block;
+      padding:6px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--accent);
+      background:rgba(56,189,248,.08);
+      font-size:14px;
+      margin-bottom:16px;
+    }
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(32px,5vw,56px);
+      line-height:1.15;
+      letter-spacing:.02em;
+    }
+    .lead{
+      max-width:760px;
+      margin:0 auto;
+      color:var(--muted);
+      font-size:18px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+      margin:28px 0 36px;
+    }
+    .card{
+      background:rgba(17,24,39,.78);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:22px;
+      backdrop-filter: blur(10px);
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    .card h3{
+      margin:0 0 10px;
+      font-size:20px;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+    }
+    section{
+      margin:22px 0;
+    }
+    .section-title{
+      font-size:28px;
+      margin:0 0 14px;
+    }
+    .panel{
+      background:rgba(15,23,42,.7);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:24px;
+    }
+    ul{
+      padding-left:1.2em;
+      margin:0;
+    }
+    li{margin:8px 0}
+    .note{
+      margin-top:16px;
+      padding:14px 16px;
+      border-left:4px solid var(--accent);
+      background:rgba(56,189,248,.08);
+      border-radius:10px;
+      color:#dbeafe;
+    }
+    footer{
+      text-align:center;
+      color:var(--muted);
+      padding:36px 24px 48px;
+      font-size:14px;
+    }
+    .hero-box{
+      margin-top:28px;
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:16px;
+    }
+    .hero-main, .hero-side{
+      background:rgba(17,24,39,.78);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:24px;
+    }
+    .hero-main h2, .hero-side h2{
+      margin-top:0;
+      font-size:22px;
+    }
+    .hero-main p, .hero-side p{
+      margin-bottom:0;
+      color:var(--muted);
+    }
+    @media (max-width: 760px){
+      .hero-box{grid-template-columns:1fr}
+      header{padding-top:48px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badge">Simple Website</div>
+      <h1>留置場の基礎案内</h1>
+      <p class="lead">
+        留置場は、逮捕された人などを一時的に収容する施設です。
+        ここでは、役割・流れ・面会や差し入れの基本情報を、見やすく整理しています。
+      </p>
+
+      <div class="hero-box">
+        <div class="hero-main">
+          <h2>留置場とは</h2>
+          <p>
+            警察署などに設置される収容施設で、捜査や手続きの進行中に被疑者が一時的に留め置かれる場所です。
+            長期収容を前提とした施設ではなく、手続き上の段階に応じて移送や釈放が行われます。
+          </p>
+        </div>
+        <div class="hero-side">
+          <h2>主なポイント</h2>
+          <p>
+            役割の理解、面会の可否、差し入れの制限、手続きの流れを把握しておくと全体像が見えやすくなります。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <h3>役割</h3>
+        <p>逮捕後の一時的な身柄拘束を行う施設です。警察による管理のもとで収容されます。</p>
+      </div>
+      <div class="card">
+        <h3>収容期間</h3>
+        <p>事件や手続きの進行によって異なります。一定期間の後、送検・勾留・釈放などに進みます。</p>
+      </div>
+      <div class="card">
+        <h3>面会</h3>
+        <p>時間帯や相手、事件の状況により制限されることがあります。事前確認が必要です。</p>
+      </div>
+      <div class="card">
+        <h3>差し入れ</h3>
+        <p>可能な物と禁止物があります。現金、衣類、書籍なども施設側の基準に従います。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">一般的な流れ</h2>
+      <div class="panel">
+        <ul>
+          <li>逮捕</li>
+          <li>警察署での留置</li>
+          <li>取調べ・手続き</li>
+          <li>検察への送致</li>
+          <li>勾留請求・釈放・別施設への移送など</li>
+        </ul>
+        <div class="note">
+          実際の対応は事案によって異なります。運用や判断は個別事情で変わります。
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">面会と差し入れ</h2>
+      <div class="panel">
+        <ul>
+          <li>面会には受付時間や本人確認が必要になることがあります。</li>
+          <li>接見禁止が付いている場合、一般の面会が制限されることがあります。</li>
+          <li>差し入れは食品・危険物・電子機器などが制限されやすいです。</li>
+          <li>書類や衣類も施設ごとに基準が異なるため、事前確認が重要です。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">このサイトについて</h2>
+      <div class="panel">
+        <p style="margin:0;color:var(--muted);">
+          見やすさ重視で作成したシンプルな1ページサイトです。
+          さらに追加するなら、FAQ、連絡先、手続きの詳細、アクセス情報などを載せられます。
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      留置場案内サイト サンプル
+    </footer>
+  </div>
+</body>
+</html>
